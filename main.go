@@ -68,7 +68,7 @@ func main() {
 		go uploader()
 	}
 
-	objectsToUpload := iterateForUpload("sample", "schachte")
+	objectsToUpload := iterateForUpload("sample", bucketName)
 	for _, objectToRemove := range objectsToUpload {
 		putReq := &s3.PutObjectInput{
 			Bucket: &bucketName,
